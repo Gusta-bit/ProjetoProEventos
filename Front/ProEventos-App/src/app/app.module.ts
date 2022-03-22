@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
 
 import { PalestrantesComponent } from './component/palestrantes/palestrantes.component';
 import { EventosComponent } from './component/eventos/eventos.component';
-import { PerfilComponent } from './component/perfil/perfil.component';
+import { PerfilComponent } from './component/user/perfil/perfil.component';
 import { ContatosComponent } from './component/contatos/contatos.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 
@@ -27,6 +27,12 @@ import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 
 import { TituloComponent } from './sherad/titulo/titulo.component';
 import { NavComponent } from './sherad/nav/nav.component';
+import { EventoDetalheComponent } from './component/eventos/evento-detalhe/evento-detalhe.component';
+import { EventoListaComponent } from './component/eventos/evento-lista/evento-lista.component';
+import { UserComponent } from './component/user/user.component';
+import { LoginComponent } from './component/user/login/login.component';
+import { RegistrationComponent } from './component/user/registration/registration.component';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +45,12 @@ import { NavComponent } from './sherad/nav/nav.component';
       TituloComponent,
       NavComponent,
       DateTimeFormatPipe,
+      EventoDetalheComponent,
+      EventoListaComponent,
+      UserComponent,
+      LoginComponent,
+      RegistrationComponent,
+
    ],
   imports: [
     BrowserModule,
