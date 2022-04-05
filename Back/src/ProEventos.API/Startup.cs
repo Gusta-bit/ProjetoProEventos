@@ -45,7 +45,11 @@ namespace ProEventos.API
 
             services.AddScoped<IGeralPersistence, GeralPersistence>();
             services.AddScoped<IEventoPersistence, EventoPersistence>();
+            services.AddScoped<ILotePersistence, LotePersistence>();
+
             services.AddScoped<IEventoService, EventoService>();
+            services.AddScoped<ILoteService, LoteService>();
+
             services.AddCors();
             services.AddSwaggerGen(c =>
             {
