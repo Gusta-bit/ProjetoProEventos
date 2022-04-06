@@ -38,7 +38,8 @@
   <tbody *ngIf="eventos && eventos.length">
     <tr *ngFor="let evento of eventosFiltrados">
       <td class="d-none d-md-table-cell">
-        <img [collapse]="mostrarImg" [isAnimated]="true" src="/assets/{{evento.imagemURL}}" alt=""
+        <img [collapse]="mostrarImg" [isAnimated]="true"
+        [src]="mostarImagem(evento.imagemURL)" alt=""
         [style.width.px] = "larguraImg"
         [style.margin.px] = "margemImg"
         >

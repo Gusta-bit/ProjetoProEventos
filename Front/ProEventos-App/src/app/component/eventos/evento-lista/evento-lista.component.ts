@@ -5,6 +5,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Evento } from '@app/models/Evento';
 import { EventoService } from '@app/services/evento.service';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-evento-lista',
@@ -61,6 +62,12 @@ export class EventoListaComponent implements OnInit {
   public alterarImg (): void {
       this.mostrarImg = !this.mostrarImg;
     }
+
+  public mostarImagem(imagemURL: string): string {
+      return imagemURL != ''
+      ? `${environment.apiURL}resources/images/${imagemURL}`
+      : 'assets/img/semImage.jpeg';
+  }
 
   public filtrarEventos( filtarPor: string): Evento[] {
       filtarPor = filtarPor.toLocaleLowerCase();
